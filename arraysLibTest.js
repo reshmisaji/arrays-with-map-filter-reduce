@@ -42,3 +42,19 @@ assert.deepEqual(reverse([1]),[1]);
 assert.deepEqual(reverse([1,2]),[2,1]);
 
 console.log("................All tests passed to reverse an array...........");
+
+/*............largest Of an array....................*/
+const largestElement = library.largestElement;
+
+assert.deepEqual(largestElement([1]),1);
+assert.deepEqual(largestElement([2,1]),2);
+
+console.log(".................All tests passed for finding the largest number of an array.................");
+
+
+
+
+///*.....................find every second element of an array....................*/
+//const nthElement = library.nthElement;
+//
+//assert.deepEqual(nthElement([1],2),[1]);

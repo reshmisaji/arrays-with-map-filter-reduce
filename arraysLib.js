@@ -41,3 +41,26 @@ const reverse = function(numbers){
 }
 
 exports.reverse = reverse;
+
+/*.............largest of an array.................*/
+const large = function(firstNumber,secondNumber){
+  return Math.max(firstNumber,secondNumber);
+}
+
+const largestElement = function(numbers){
+  return numbers.reduce(large);
+}
+
+exports.largestElement = largestElement;
+
+
+///*.................nthElement of an array....................*/
+//const isNthSeries = function(number){
+//  return (number.index % this == 0);
+//}
+//
+//const nthElement = function(numbers,value){
+//  return numbers.filter(isNthSeries,value);
+//}
+//
+//exports.nthElement = nthElement;
