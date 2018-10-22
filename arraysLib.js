@@ -29,3 +29,15 @@ const getSum = function(numbers){
 }
 
 exports.getSum = getSum;
+
+/*.................reverse..............*/
+const pushToBeginning = function(array,number){
+  array.unshift(number);
+  return array;
+}
+
+const reverse = function(numbers){
+  return numbers.reduce(pushToBeginning,[]);
+}
+
+exports.reverse = reverse;

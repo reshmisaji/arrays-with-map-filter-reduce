@@ -33,3 +33,12 @@ assert.deepEqual(getSum([1,2]),3);
 assert.deepEqual(getSum([-2]),-2);
 
 console.log("................All tests passed to calculate the sum of elements of an array..............");
+
+/*............reverse of numbers....................*/
+const reverse = library.reverse;
+
+assert.deepEqual(reverse([]),[]);
+assert.deepEqual(reverse([1]),[1]);
+assert.deepEqual(reverse([1,2]),[2,1]);
+
+console.log("................All tests passed to reverse an array...........");
