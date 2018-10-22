@@ -53,7 +53,16 @@ const largestElement = function(numbers){
 
 exports.largestElement = largestElement;
 
+/*...................smallest element of an array...............*/
+const small = function(firstNumber,secondNumber){
+  return Math.min(firstNumber,secondNumber);
+}
 
+const smallestElement = function(numbers){
+  return numbers.reduce(small);
+}
+
+exports.smallestElement = smallestElement;
 ///*.................nthElement of an array....................*/
 //const isNthSeries = function(number){
 //  return (number.index % this == 0);

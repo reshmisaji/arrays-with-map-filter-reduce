@@ -51,7 +51,13 @@ assert.deepEqual(largestElement([2,1]),2);
 
 console.log(".................All tests passed for finding the largest number of an array.................");
 
+/*...................smallest of an array................*/
+const smallestElement = library.smallestElement;
 
+assert.deepEqual(smallestElement([1]),1);
+assert.deepEqual(smallestElement([1,2]),1);
+
+console.log(".........All tests passed for finding the smallest element of an array........");
 
 
 ///*.....................find every second element of an array....................*/
