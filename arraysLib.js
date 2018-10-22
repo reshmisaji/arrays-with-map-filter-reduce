@@ -1,10 +1,23 @@
-/*.....................Odd Numbers....................*/
-const isOdd = function(number){
-  return number%2;
+/*.....................getting library arraysLib from arrayAssignment....................*/
+const library = require('../arrayPractices/arrayAssignment2/arraysLib.js');
+
+/*.................odd Numbers......................*/
+const filterOdd = function(numbers){
+  return numbers.filter(library.isEven);
 }
 
-const oddNumbers = function(numbers){
-  return numbers.filter(isOdd);
+exports.filterOdd = filterOdd;
+
+/*......................even Numbers.............*/
+const isEven = function(number){
+  if(number % 2 == 0){
+    return 1;
+  }else {
+    return 0;
+  }
+}
+const filterEven = function(numbers){
+  return numbers.filter(isEven);
 }
 
-exports.oddNumbers = oddNumbers;
+exports.filterEven = filterEven;
