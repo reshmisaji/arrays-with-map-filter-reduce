@@ -23,3 +23,13 @@ assert.deepEqual(filterEven([2,2]),[2,2]);
 assert.deepEqual(filterEven([1,1]),[]);
 
 console.log("............All tests passed for filtering even numbers............");
+
+/*...................Sum of elements of an array...................*/
+const getSum = library.getSum;
+
+assert.deepEqual(getSum([]),0);
+assert.deepEqual(getSum([1]),1);
+assert.deepEqual(getSum([1,2]),3);
+assert.deepEqual(getSum([-2]),-2);
+
+console.log("................All tests passed to calculate the sum of elements of an array..............");

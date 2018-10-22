@@ -16,8 +16,16 @@ const isEven = function(number){
     return 0;
   }
 }
+
 const filterEven = function(numbers){
   return numbers.filter(isEven);
 }
 
 exports.filterEven = filterEven;
+
+/*.................sum of elements of an array..............*/
+const getSum = function(numbers){
+  return numbers.reduce(library.add,0);
+}
+
+exports.getSum = getSum;
