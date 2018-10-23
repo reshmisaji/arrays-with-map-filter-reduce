@@ -1,6 +1,28 @@
 /*.....................getting library arraysLib from arrayAssignment....................*/
 const library = require('../arrayPractices/arrayAssignment2/arraysLib.js');
 
+/*..............display test report..............*/
+const repeatCharacter = function(character,times){
+  let characters = new Array(times).fill(character);
+  return characters.join("").toString();
+}
+
+const getSuffix = function(length,prefix){ 
+  return (prefix+repeatCharacter(".",library.isEven(length)));
+}
+const justify = function(text){
+  let times = Math.floor((100 - text.length)/2); 
+  prefix = repeatCharacter(".",times);
+  suffix = getSuffix(text.length,prefix);
+  return prefix+text+suffix;
+}
+
+const display = function(text){
+  let message = justify(text);
+  return ("|"+message+"|");
+}
+
+exports.display = display;
 /*.................odd Numbers......................*/
 const filterOdd = function(numbers){
   return numbers.filter(library.isEven);
