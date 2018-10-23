@@ -63,13 +63,10 @@ const smallestElement = function(numbers){
 }
 
 exports.smallestElement = smallestElement;
-///*.................nthElement of an array....................*/
-//const isNthSeries = function(number){
-//  return (number.index % this == 0);
-//}
-//
-//const nthElement = function(numbers,value){
-//  return numbers.filter(isNthSeries,value);
-//}
-//
-//exports.nthElement = nthElement;
+
+/*................Average of an array................*/
+const averageArray = function(numbers){
+  return (getSum(numbers)/numbers.length);
+}
+
+exports.averageArray = averageArray;

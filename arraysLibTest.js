@@ -59,7 +59,14 @@ assert.deepEqual(smallestElement([1,2]),1);
 
 console.log(".........All tests passed for finding the smallest element of an array........");
 
+/*..............Average of an array..................*/
+const averageArray = library.averageArray;
 
+assert.deepEqual(averageArray([1]),1);
+assert.deepEqual(averageArray([1,2]),1.5);
+assert.deepEqual(averageArray([1,2,3]),2);
+
+console.log(".............All tests passed for calculating the average of an array...............");
 ///*.....................find every second element of an array....................*/
 //const nthElement = library.nthElement;
 //
