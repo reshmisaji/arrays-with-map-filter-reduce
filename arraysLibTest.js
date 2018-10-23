@@ -95,3 +95,15 @@ assert.deepEqual(countOdd([]),0);
 assert.deepEqual(countOdd([1]),1);
 assert.deepEqual(countOdd([2]),0);
 assert.deepEqual(countOdd([2,1]),1);
+
+displayTestReport("All tests for counting odd numbers is passed");
+
+/*............count Even Numbers....................*/
+const countEven = library.countEven;
+
+assert.deepEqual(countEven([]),0);
+assert.deepEqual(countEven([1]),0);
+assert.deepEqual(countEven([2]),1);
+assert.deepEqual(countEven([2,1]),1);
+
+displayTestReport("All tests for counting even numbers is passed");

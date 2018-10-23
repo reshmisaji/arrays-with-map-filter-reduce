@@ -117,3 +117,15 @@ const countOdd = function(numbers){
 }
 
 exports.countOdd = countOdd;
+
+/*...................count even numbers...........*/
+const evenCount = function(count,number){
+  count += isEven(number);
+  return count;
+}
+
+const countEven = function(numbers){
+  return numbers.reduce(evenCount,0);
+}
+
+exports.countEven = countEven;
