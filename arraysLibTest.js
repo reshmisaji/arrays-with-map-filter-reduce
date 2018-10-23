@@ -4,9 +4,11 @@ const library = require('./arraysLib.js');
 
 /*..............display Output....................*/
 const display = library.display;
+let serialNumber = 0;
 
 const displayTestReport = function(text){
-  console.log(display(text));
+  serialNumber++;
+  console.log(serialNumber,display(text));
 console.log("\n");
 }
 
@@ -75,7 +77,13 @@ assert.deepEqual(averageArray([1,2]),1.5);
 assert.deepEqual(averageArray([1,2,3]),2);
 
 displayTestReport(".............All tests passed for calculating the average of an array...............");
-///*.....................find every second element of an array....................*/
-//const nthElement = library.nthElement;
-//
-//assert.deepEqual(nthElement([1],2),[1]);
+
+/*...................Mapping the length of the texts..............*/
+const mapLength = library.mapLength;
+
+assert.deepEqual(mapLength([""]),[0]);
+assert.deepEqual(mapLength(["a"]),[1]);
+assert.deepEqual(mapLength(["ba"]),[2]);
+assert.deepEqual(mapLength(["","a"]),[0,1]);
+
+displayTestReport("All tests for map word length is passed");

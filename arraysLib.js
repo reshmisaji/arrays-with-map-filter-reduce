@@ -92,3 +92,16 @@ const averageArray = function(numbers){
 }
 
 exports.averageArray = averageArray;
+
+/*................Mapping word length.............*/
+const getLength = function(lengths,word){
+  let value = word.length;
+  lengths.push(value);
+  return lengths;
+}
+
+const mapLength = function(words){
+  return words.reduce(getLength,[]);
+}
+
+exports.mapLength = mapLength;
