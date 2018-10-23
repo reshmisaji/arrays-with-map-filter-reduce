@@ -87,3 +87,11 @@ assert.deepEqual(mapLength(["ba"]),[2]);
 assert.deepEqual(mapLength(["","a"]),[0,1]);
 
 displayTestReport("All tests for map word length is passed");
+
+/*..................Count odd numbers......................*/
+const countOdd = library.countOdd;
+
+assert.deepEqual(countOdd([]),0);
+assert.deepEqual(countOdd([1]),1);
+assert.deepEqual(countOdd([2]),0);
+assert.deepEqual(countOdd([2,1]),1);

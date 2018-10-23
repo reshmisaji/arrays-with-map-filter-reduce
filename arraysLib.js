@@ -105,3 +105,15 @@ const mapLength = function(words){
 }
 
 exports.mapLength = mapLength;
+
+/*.............count odd numbers...................*/
+const oddCount = function(count,number){
+  count += library.isEven(number);
+  return count;
+}
+
+const countOdd = function(numbers){
+  return numbers.reduce(oddCount,0);
+}
+
+exports.countOdd = countOdd;
