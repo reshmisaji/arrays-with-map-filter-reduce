@@ -101,27 +101,23 @@ exports.mapLength = mapLength;
 
 /*.............count odd numbers...................*/
 const oddCount = function(count,number){
-  count += library.isEven(number);
+  count += isOdd(number);
   return count;
 }
 
-const countOdd = function(numbers){
-  return numbers.reduce(oddCount,0);
-}
-
-exports.countOdd = countOdd;
-
-/*...................count even numbers...........*/
 const evenCount = function(count,number){
   count += isEven(number);
   return count;
 }
 
-const countEven = function(numbers){
-  return numbers.reduce(evenCount,0);
+const countEvenOdd = function(numbers){
+  let evenOddCount = [];
+  evenOddCount.push(numbers.reduce(evenCount,0));
+  evenOddCount.push(numbers.reduce(oddCount,0));
+  return evenOddCount;
 }
 
-exports.countEven = countEven;
+exports.countEvenOdd = countEvenOdd;
 
 /*............partition by threshold................*/
 const isLarge = function(number,threshold){
