@@ -106,3 +106,21 @@ assert.deepEqual(aboveBelowCount([3,1],3),[2,0]);
 assert.deepEqual(aboveBelowCount([3,1,5],3),[2,1]);
 
 displayTestReport("All tests for counting the elements above and below a threshold frequency of the array passed");
+
+/*...................reverses of an array without changing the array.............*/
+const reverseArray = library.reverseArray;
+
+assert.deepEqual(reverseArray([1]),[1]);
+assert.deepEqual(reverseArray([1,2]),[2,1]);
+
+displayTestReport("All tests passed for reversing an array");
+
+/*...................find the index of an element in an array.....................*/
+const elementIndex = library.elementIndex;
+
+assert.deepEqual(elementIndex([1],1),0);
+assert.deepEqual(elementIndex([1,2],2),1);
+assert.deepEqual(elementIndex([1,2,3],3),2);
+assert.deepEqual(elementIndex([1,3,3],3),1);
+
+displayTestReport("All tests passed for finding the index of an element of an array");

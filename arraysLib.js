@@ -161,3 +161,30 @@ const aboveCount = function(count,number){
 }
 
 exports.aboveBelowCount = aboveBelowCount;
+
+/*......................reverse an array without changing the original array.........................*/
+const reverseArray = function(numbers){
+  let reversedArray = numbers.reduce(pushToBeginning,[]);
+  return reversedArray;
+}
+
+exports.reverseArray = reverseArray;
+
+/*.............................index of an element of an array........................................*/
+const isElement = function(element,number){
+  return element == number;
+}
+
+const elementIndex = function(numbers,element){
+  let index = -1;
+  const isArrayElement = function(count,number){
+    index ++;
+    if(isElement(element,number) && count == -1){
+      count = index;
+    }
+    return count;
+  }
+  return numbers.reduce(isArrayElement,-1);
+}
+
+exports.elementIndex = elementIndex;
