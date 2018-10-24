@@ -129,3 +129,22 @@ const countEven = function(numbers){
 }
 
 exports.countEven = countEven;
+
+/*............partition by threshold................*/
+const isLarge = function(number,threshold){
+  let returnValue = 0;
+  if(number>threshold){
+    returnValue = 1;
+  }
+  return returnValue;
+}
+
+const partition = function(numbers,threshold){
+  const aboveBelow = function(partitionArray,number){  
+    partitionArray[isLarge(number,threshold)].push(number);
+    return partitionArray;
+  }
+  return numbers.reduce(aboveBelow,[[],[]]);
+}
+
+exports.partition = partition;

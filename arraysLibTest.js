@@ -107,3 +107,12 @@ assert.deepEqual(countEven([2]),1);
 assert.deepEqual(countEven([2,1]),1);
 
 displayTestReport("All tests for counting even numbers is passed");
+
+/*..............partition by a threshold frequency............*/
+const partition = library.partition;
+
+assert.deepEqual(partition([1],1),[[1],[]]);
+assert.deepEqual(partition([1,2],1),[[1],[2]]);
+assert.deepEqual(partition([1,2,3],2),[[1,2],[3]]);
+
+displayTestReport("All tests for  partitioning the array with a threshold");
