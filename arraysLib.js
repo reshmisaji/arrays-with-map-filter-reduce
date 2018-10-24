@@ -57,27 +57,22 @@ const reverse = function(numbers){
 
 exports.reverse = reverse;
 
-/*.............largest of an array.................*/
+/*.............largest and lowest of an array.................*/
 const large = function(firstNumber,secondNumber){
   return Math.max(firstNumber,secondNumber);
 }
 
-const largestElement = function(numbers){
-  return numbers.reduce(large);
-}
-
-exports.largestElement = largestElement;
-
-/*...................smallest element of an array...............*/
 const small = function(firstNumber,secondNumber){
   return Math.min(firstNumber,secondNumber);
 }
 
-const smallestElement = function(numbers){
-  return numbers.reduce(small);
+const largestLowestElement = function(numbers){
+  let lowest = numbers.reduce(small);
+  let largest = numbers.reduce(large);
+  return [lowest,largest];
 }
 
-exports.smallestElement = smallestElement;
+exports.largestLowestElement = largestLowestElement;
 
 /*................Average of an array................*/
 const averageArray = function(numbers){
@@ -99,7 +94,7 @@ const mapLength = function(words){
 
 exports.mapLength = mapLength;
 
-/*.............count odd numbers...................*/
+/*.............count even and odd numbers...................*/
 const oddCount = function(count,number){
   count += isOdd(number);
   return count;
