@@ -188,3 +188,17 @@ const elementIndex = function(numbers,element){
 }
 
 exports.elementIndex = elementIndex;
+
+/*....................................unique array.......................................................*/
+const generateUniqueArray = function(uniqueNumbers,number){
+  if(!(uniqueNumbers.includes(number))){
+    uniqueNumbers.push(number);
+  }
+  return uniqueNumbers;
+}
+
+const uniqueArray = function(numbers){
+  return numbers.reduce(generateUniqueArray,[]);
+}
+
+exports.uniqueArray = uniqueArray;

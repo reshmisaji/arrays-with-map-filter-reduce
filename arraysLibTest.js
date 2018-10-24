@@ -124,3 +124,13 @@ assert.deepEqual(elementIndex([1,2,3],3),2);
 assert.deepEqual(elementIndex([1,3,3],3),1);
 
 displayTestReport("All tests passed for finding the index of an element of an array");
+
+/*.......................unique array.............................................*/
+const uniqueArray = library.uniqueArray;
+
+assert.deepEqual(uniqueArray([1]),[1]);
+assert.deepEqual(uniqueArray([1,1]),[1]);
+assert.deepEqual(uniqueArray([1,2,3,1,2]),[1,2,3]);
+
+displayTestReport("All tests passed for extracting the unique array");
+
