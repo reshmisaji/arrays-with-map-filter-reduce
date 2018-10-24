@@ -12,27 +12,16 @@ const displayTestReport = function(text){
 console.log("\n");
 }
 
-/*................filter odd numbers...........*/
-const filterOdd = library.filterOdd;
+/*................filter even and odd numbers...........*/
+const filterEvenOdd = library.filterEvenOdd;
 
-assert.deepEqual(filterOdd([1]),[1]);
-assert.deepEqual(filterOdd([2]),[]);
-assert.deepEqual(filterOdd([1,2]),[1]);
-assert.deepEqual(filterOdd([2,2]),[]);
-assert.deepEqual(filterOdd([1,3]),[1,3]);
+assert.deepEqual(filterEvenOdd([1]),[[],[1]]);
+assert.deepEqual(filterEvenOdd([2]),[[2],[]]);
+assert.deepEqual(filterEvenOdd([1,2]),[[2],[1]]);
+assert.deepEqual(filterEvenOdd([2,2]),[[2,2],[]]);
+assert.deepEqual(filterEvenOdd([1,3]),[[],[1,3]]);
 
-displayTestReport(".............All tests passed for filtering odd numbers.........");
-
-/*.........filter even numbers..............*/
-const filterEven = library.filterEven;
-
-assert.deepEqual(filterEven([1]),[]);
-assert.deepEqual(filterEven([2]),[2]);
-assert.deepEqual(filterEven([1,2]),[2]);
-assert.deepEqual(filterEven([2,2]),[2,2]);
-assert.deepEqual(filterEven([1,1]),[]);
-
-displayTestReport("............All tests passed for filtering even numbers............");
+displayTestReport(".............All tests passed for filtering odd and even numbers.........");
 
 /*...................Sum of elements of an array...................*/
 const getSum = library.getSum;
@@ -126,3 +115,6 @@ assert.deepEqual(secondElement([1,2],2),[1]);
 assert.deepEqual(secondElement([1,2,3],2),[1,3]);
 
 displayTestReport("All tests for finding every second element of the array passed");
+
+/*................count numbers above and below threshold.......................*/
+

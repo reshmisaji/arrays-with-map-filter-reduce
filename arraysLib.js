@@ -7,13 +7,10 @@ const repeatCharacter = function(character,times){
   return characters.join("").toString();
 }
 
-const getSuffix = function(length,prefix){ 
-  return (prefix+repeatCharacter(".",library.isEven(length)));
-}
 const justify = function(text){
   let times = Math.floor((100 - text.length)/2); 
   prefix = repeatCharacter(".",times);
-  suffix = getSuffix(text.length,prefix);
+  suffix = (prefix+repeatCharacter(".",library.isEven(text.length)));
   return prefix+text+suffix;
 }
 
@@ -23,27 +20,23 @@ const display = function(text){
 }
 
 exports.display = display;
-/*.................odd Numbers......................*/
-const filterOdd = function(numbers){
-  return numbers.filter(library.isEven);
-}
 
-exports.filterOdd = filterOdd;
-
-/*......................even Numbers.............*/
+/*......................odd and even Numbers.............*/
 const isEven = function(number){
-  if(number % 2 == 0){
-    return 1;
-  }else {
-    return 0;
-  }
+  return number % 2 == 0 ? 1 : 0;
 }
 
-const filterEven = function(numbers){
-  return numbers.filter(isEven);
+const isOdd = function(number){
+  return number % 2;
+}
+const filterEvenOdd = function(numbers){
+  let partitionNumbers = [];
+  partitionNumbers.push(numbers.filter(isEven));
+  partitionNumbers.push(numbers.filter(isOdd));
+  return partitionNumbers;
 }
 
-exports.filterEven = filterEven;
+exports.filterEvenOdd = filterEvenOdd;
 
 /*.................sum of elements of an array..............*/
 const getSum = function(numbers){
