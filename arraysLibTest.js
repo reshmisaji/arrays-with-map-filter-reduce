@@ -99,4 +99,10 @@ assert.deepEqual(secondElement([1,2,3],2),[1,3]);
 displayTestReport("All tests for finding every second element of the array passed");
 
 /*................count numbers above and below threshold.......................*/
+const aboveBelowCount = library.aboveBelowCount;
 
+assert.deepEqual(aboveBelowCount([3],3),[1,0]);
+assert.deepEqual(aboveBelowCount([3,1],3),[2,0]);
+assert.deepEqual(aboveBelowCount([3,1,5],3),[2,1]);
+
+displayTestReport("All tests for counting the elements above and below a threshold frequency of the array passed");
