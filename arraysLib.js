@@ -132,11 +132,7 @@ exports.countEven = countEven;
 
 /*............partition by threshold................*/
 const isLarge = function(number,threshold){
-  let returnValue = 0;
-  if(number>threshold){
-    returnValue = 1;
-  }
-  return returnValue;
+  return number>threshold? 1 : 0 ;
 }
 
 const partition = function(numbers,threshold){
@@ -148,3 +144,15 @@ const partition = function(numbers,threshold){
 }
 
 exports.partition = partition;
+
+/*................find the second element of an array...............*/
+const secondElement = function(numbers,nthValue){
+  let count = -1;
+  const isNthElement = function(number){ 
+    count ++;
+    return (count % nthValue == 0);
+  }
+  return numbers.filter(isNthElement);
+}
+
+exports.secondElement = secondElement;

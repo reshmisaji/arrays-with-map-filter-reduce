@@ -116,3 +116,13 @@ assert.deepEqual(partition([1,2],1),[[1],[2]]);
 assert.deepEqual(partition([1,2,3],2),[[1,2],[3]]);
 
 displayTestReport("All tests for  partitioning the array with a threshold");
+
+/*....................select the second element of an array...................*/
+const secondElement = library.secondElement;
+
+assert.deepEqual(secondElement([],2),[]);
+assert.deepEqual(secondElement([0],2),[0]);
+assert.deepEqual(secondElement([1,2],2),[1]);
+assert.deepEqual(secondElement([1,2,3],2),[1,3]);
+
+displayTestReport("All tests for finding every second element of the array passed");
