@@ -9,7 +9,7 @@ let serialNumber = 0;
 const displayTestReport = function(text){
   serialNumber++;
   console.log(serialNumber,display(text));
-  console.log("\n");
+console.log("\n");
 }
 
 /*................filter even and odd numbers...........*/
